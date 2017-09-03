@@ -13,8 +13,8 @@ package 'apache2' do
    action :install
 end
 
-service 'apache2' do
-   service_name 'httpd'
+service package do
+   service_name package
    action [:start, :enable]
 end
 #include_recipe 'apache::websites'
